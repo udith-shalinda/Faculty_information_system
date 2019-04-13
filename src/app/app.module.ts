@@ -9,13 +9,16 @@ import { UserComponent } from './login/user/user.component';
 import { SigninComponent } from './login/user/signin/signin.component';
 import { SignupComponent } from './login/user/signup/signup.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import {SlideshowModule} from 'ng-simple-slideshow';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
     SigninComponent,
-    SignupComponent
+    SignupComponent,
+    HomeComponent
     
   ],
   imports: [
@@ -24,7 +27,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     FlexLayoutModule,
     ReactiveFormsModule,
-  
+    SlideshowModule,
     
     MatButtonModule,
     MatToolbarModule,
