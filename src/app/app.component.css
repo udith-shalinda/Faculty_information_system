@@ -1,0 +1,25 @@
+mat-toolbar{
+    height: 10%;
+}
+mat-sidenav-container{
+    height: 90%;
+    
+}
+mat-sidenav{
+    width:250px;
+}
+#navlogin{
+    display:none;
+}
+@media only screen and (max-width: 500px) {
+    #login{
+        display: none;
+    }
+    #navlogin{
+        display: grid;
+    }
+  }
+  /* #login{
+  //    margin-left:60%;
+  } */
+ 
