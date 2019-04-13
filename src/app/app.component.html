@@ -1,6 +1,6 @@
 <mat-toolbar color="primary">
   <button mat-button color="default" (click)="navbar.toggle()"><mat-icon>menu</mat-icon></button>
-  <span >Faculty Information System</span>
+  <span routerLink="/">Faculty Information System</span>
   <span fxFlex></span>
   <button mat-raised-button color="default" id="login" routerLink="/login">Login</button>
 
@@ -9,12 +9,11 @@
 
 <mat-sidenav-container>
     <mat-sidenav mode="push" closed #navbar>
-      <button mat-raised-button color="primary" id="navlogin">Login</button>
+      <button mat-raised-button color="primary" id="navlogin" routerLink="/login">Login</button>
     </mat-sidenav>
+
     <mat-sidenav-content>
-          <!-- <mat-form-field>
-            <input matInput placeholder="Input">
-          </mat-form-field> -->
+          
           <router-outlet></router-outlet>
           
     </mat-sidenav-content>
