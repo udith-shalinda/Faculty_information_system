@@ -15,6 +15,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { ProfileInfoService } from './profile/profileInfo.service';
 import { ResultComponent } from './profile/result/result.component';
 import { SubjectsComponent } from './profile/subjects/subjects.component';
+import { LoginService } from './login.service';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,7 @@ import { SubjectsComponent } from './profile/subjects/subjects.component';
 
 
   ],
-  providers: [ProfileInfoService],
+  providers: [ProfileInfoService,LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

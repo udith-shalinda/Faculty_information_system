@@ -2,14 +2,16 @@
   <button mat-button color="default" (click)="navbar.toggle()"><mat-icon>menu</mat-icon></button>
   <span routerLink="/">Faculty Information System</span>
   <span fxFlex></span>
-  <button mat-raised-button color="default" id="login" routerLink="/login">Login</button>
+  <button mat-raised-button color="default" id="login" routerLink="/login" *ngIf="!loginservice.login">Login</button>
+  <button mat-raised-button color="default" id="login" (click)="logoutmethod()" *ngIf="loginservice.login">Logout</button>
 
 
 </mat-toolbar>
 
 <mat-sidenav-container>
     <mat-sidenav mode="push" closed #navbar>
-      <button mat-raised-button color="primary" id="navlogin" routerLink="/login">Login</button>
+      <button mat-raised-button color="primary" id="navlogin" routerLink="/login"  *ngIf="!login">Login</button>
+      <button mat-raised-button color="primary" id="navlogin" routerLink="/login" *ngIf="login">Logout</button>
     </mat-sidenav>
 
     <mat-sidenav-content>
