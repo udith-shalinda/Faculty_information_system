@@ -1,12 +1,22 @@
-<table   class="mat-elevation-z8">
-  <tr>
-    <th>Subject</th>
-    <th>Result</th>
-  </tr>
-  <tr *ngFor="let ele of subjects">
-    <td>{{ele.subject}}</td>
-    <td>{{ele.result}}</td>
-    
-  </tr>
+<table mat-table [dataSource]="subjects" class="mat-elevation-z8">
 
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="subject">
+    <th mat-header-cell *matHeaderCellDef> Subject </th>
+    <td mat-cell *matCellDef="let subjects"> {{subjects.subject}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="result">
+    <th mat-header-cell *matHeaderCellDef> Result </th>
+    <td mat-cell *matCellDef="let subjects"> {{subjects.result}} </td>
+  </ng-container>
+
+  
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>

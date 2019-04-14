@@ -8,6 +8,7 @@ import { ProfileInfoService } from '../profileInfo.service';
 })
 export class ResultComponent implements OnInit {
   subjects:{subject:string,result:string}[]
+  displayedColumns:string[]=['subject','result'];
   constructor(private profileinfo:ProfileInfoService) { }
 
   ngOnInit() {
