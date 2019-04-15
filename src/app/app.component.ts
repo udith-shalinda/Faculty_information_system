@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { LoginService } from './login.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -9,10 +10,11 @@ import { LoginService } from './login.service';
 export class AppComponent {
   title = 'Faculty Information System';
   
-  constructor(private loginservice:LoginService){}
+  constructor(private loginservice:LoginService,private route:ActivatedRoute,private router:Router){}
   login = this.loginservice.login;
 
   logoutmethod(){
-    console.log("logout");
+    this.loginservice.login=false;
+    this.router.navigate(['/'],{relativeTo:this.route});
   }
 }
